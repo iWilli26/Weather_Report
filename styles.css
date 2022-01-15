@@ -10,7 +10,29 @@
   left: 25%;
   background-color: rgba(0, 255, 255, 0.6);
   border-radius: 5%;
+  flex-wrap: wrap;
 }
+
+.city {
+  width: 100%;
+}
+
+.report {
+  width: 100%;
+}
+
+.temp {
+  width: 100%;
+}
+
+.ressenti {
+  width: 100%;
+}
+
+.description {
+  width: 100%;
+}
+
 body {
   margin: 0;
   background-image: url("Weather.jpg");
