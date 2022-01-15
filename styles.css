@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  width: 50%;
+  max-width: 800px;
+  justify-content: center;
+  height: 60%;
+  border: 5px thick;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  background-color: rgba(0, 255, 255, 0.6);
+  border-radius: 5%;
+}
+body {
+  margin: 0;
+  background-image: url("Weather.jpg");
+  background-size: 100%;
+}
+
+.background {
+  background-color: black;
+  position: absolute;
+  opacity: 50%;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
