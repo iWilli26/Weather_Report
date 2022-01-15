@@ -9,7 +9,6 @@ function afficheMeteo(city) {
       apiKey
   )
     .then(function (response) {
-      // console.log(response.json());
       if (!response.ok) {
         alert("Pas de météo trouvé");
         throw new Error("Pas de météo trouvé");
@@ -17,9 +16,7 @@ function afficheMeteo(city) {
       return response.json();
     })
     .then(function (value) {
-      console.log(value);
       meteo = value;
-      console.log(meteo);
       const { name } = meteo;
       const { description } = meteo.weather[0];
       const { temp, feels_like } = meteo.main;
@@ -32,6 +29,12 @@ function afficheMeteo(city) {
 }
 
 document.querySelector(".search_button").addEventListener("click", function () {
-  console.log("test");
   afficheMeteo(document.querySelector(".search-bar").value);
 });
+document
+  .querySelector(".search-bar")
+  .addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      afficheMeteo(document.querySelector(".search-bar").value);
+    }
+  });
